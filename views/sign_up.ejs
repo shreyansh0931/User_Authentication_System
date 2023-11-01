@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+
+</head>
+
+<body>
+    <h3 class="mb-5">Sign up</h3>
+    <form action="/create-user" id="create-user-form" method="post">
+        <div class="form-outline mb-4">
+            <input type="text" name="name" id="name" required placeholder="Name" />
+        </div>
+        <div class="form-outline mb-4">
+            <input type="email" name="email" id="email" required placeholder="Email" />
+        </div>
+        <div class="form-outline mb-4">
+            <input type="password" name="password" id="password" required placeholder="Password" />
+        </div>
+        <div class="form-outline mb-4">
+            <input type="password" name="confirm_password" id="confirm_password" required
+                placeholder="Confirm password" />
+        </div>
+        <!-- Add an input field to store the reCAPTCHA token -->
+        <input type="hidden" name="recaptchaToken" id="recaptchaToken" />
+
+        <!-- Add a button that calls the executeRecaptcha function -->
+        <button class="btn btn-primary btn-lg btn-block" onclick="executeRecaptcha()">Sign up</button>
+
+        <div class="divider d-flex align-items-center my-4">
+            <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+        </div>
+        <a href="/auth/google" class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;">
+            <i class="fab fa-google me-2"></i> Sign up with Google
+        </a>
+        <br>
+        <div class="d-flex align-items-center justify-content-center mt-4">
+            <p class="mb-0 me-2">Already have an account?</p>
+            <a href="/sign-in" class="btn btn-outline-primary">Sign in</a>
+        </div>
+    </form>
+
+    
+</body>
+
+</html>
